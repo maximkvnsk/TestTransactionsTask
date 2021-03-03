@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using TestTransactionsTask.Authentication;
@@ -25,7 +22,6 @@ namespace TestTransactionsTask.Models
                 options.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
                 base.OnConfiguring(optionsBuilder);
             });
-            //   optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=TestDB;Trusted_Connection=True;");
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {

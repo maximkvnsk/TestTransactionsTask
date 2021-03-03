@@ -18,7 +18,7 @@ namespace TestTransactionsTask.ExcelCreating
             worksheet.Cells["B1"].PutValue("Type");
             worksheet.Cells["C1"].PutValue("Status");
             worksheet.Cells["D1"].PutValue("Amount");
-            foreach (var t in transactionList)
+            foreach (Transaction t in transactionList)
             {
                 worksheet.Cells["A" + counter].PutValue(t.ClientName);
                 worksheet.Cells["B" + counter].PutValue(t.Type);

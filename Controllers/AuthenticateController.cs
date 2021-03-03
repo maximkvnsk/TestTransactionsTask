@@ -10,6 +10,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace TestTransactionsTask.Controllers
 {
@@ -28,6 +29,7 @@ namespace TestTransactionsTask.Controllers
             _configuration = configuration;
         }
 
+        [SwaggerOperation(Summary = "Give JWT in case of succesful user autenthication")]
         [HttpPost]
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
@@ -67,6 +69,7 @@ namespace TestTransactionsTask.Controllers
             return Unauthorized();
         }
 
+        [SwaggerOperation(Summary = "Create new user. Password must contain at least 1 uppercase letter, '@' symbol and numeric character ")]
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel model)
