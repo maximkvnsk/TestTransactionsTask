@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Features\AuthenticateFeatures\**" />
+    <Content Remove="Features\AuthenticateFeatures\**" />
+    <EmbeddedResource Remove="Features\AuthenticateFeatures\**" />
+    <None Remove="Features\AuthenticateFeatures\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Aspose.Cells" Version="21.2.0" />
     <PackageReference Include="CsvHelper" Version="25.0.0" />
     <PackageReference Include="MediatR" Version="9.0.0" />
@@ -20,10 +27,6 @@
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.0.7" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Features\AuthenticateFeatures\AuthenticateQueries\" />
   </ItemGroup>
 
   <ItemGroup>
