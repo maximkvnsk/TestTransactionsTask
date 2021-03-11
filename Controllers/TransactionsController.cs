@@ -23,6 +23,8 @@ namespace TestTransactionsTask.Controllers
 
         [SwaggerOperation(Summary = "Read .csv file, upoaded to fileForm and import data to DB")]
         [HttpPost]
+
+        // TODO: add file validation
         public async Task<IActionResult> Create([FromForm]ImportTransactionsFromCsvCommand command, IFormFile fileForm)
         {
             return Ok(await Mediator.Send(new ImportTransactionsFromCsvCommand { uploadedFile = fileForm }));

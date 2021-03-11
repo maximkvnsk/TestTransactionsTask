@@ -16,6 +16,8 @@ namespace TestTransactionsTask.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    //TODO: remove logic out of controller.
     public class AuthenticateController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> userManager;
